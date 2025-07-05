@@ -7,6 +7,34 @@
 
     <style>
         /* css here */
+
+        /* Make body and html fill full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Wrapper to hold everything */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Main content grows to fill space */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: right;
+            padding: 15px 100px;
+            background-color: #f1f1f1;
+        }
+        /* end footer */
+
         /* logo */
         #logo {
             width: 4%;
@@ -184,103 +212,108 @@
     </style>
 </head>
 <body>
-    <!-- header -->
-    <header>
-        <nav id="navbar">
-            <div id="navbar-container">
-                <!-- logo here -->
-                <a href="#">
-                    <img id="logo" src="./img/RevoU.png" alt="RevoU Logo">
-                </a>
-                <ul id="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Our Profile</a></li>
-                    <li><a href="#">Portofolio</a></li>
-                    <li><a href="#">Message Us</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- end header -->
-
-    <!-- slider -->
-    <section id="slider">
-        <h2 id="welcome-text">Hi Nama, Welcome To website</h2>
-        <p>Ini adalah website latihan</p>
-        <!-- slider content here -->
-    </section>
-    <!-- end slider -->
-
-    <!-- HQ Info -->
-    <section id="HQ">
-        <!-- HQ content here -->
-        <h2>Headquarter</h2>
-        <div id="HQinfo">
-            <div id="HQline">
-                <img src="./img/RevoU.png" alt="" id="HQjakarta">
-                <p id="HQinfo-jakarta">Jakarta</p>
-            </div>
-            <div id="HQline">
-                <img src="./img/RevoU.png" alt="" id="HQbandung">
-                <p id="HQinfo-bandung">Bandung</p>
-            </div>
-            <div id="HQline">
-                <img src="./img/RevoU.png" alt="" id="HQsurabaya">
-                <p id="HQinfo-surabaya">Surabaya</p>
-            </div>
-        </div>
-    </section>
-    <!-- end HQ Info -->
-
-    <!-- message form -->
-    <section id="message-section">
-        <h2>Message Us</h2>
-        <div class="container">
-            <!-- Form -->
-            <form id="message-form">
-                <div class="form-row">
-                    <label for="name">Nama :</label>
-                    <input type="text" id="name" placeholder="Nama" required>
+    
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <nav id="navbar">
+                <div id="navbar-container">
+                    <!-- logo here -->
+                    <a href="#">
+                        <img id="logo" src="./img/RevoU.png" alt="RevoU Logo">
+                    </a>
+                    <ul id="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./profile.html" target="_blank">Our Profile</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#message-section">Message Us</a></li>
+                    </ul>
                 </div>
+            </nav>
+        </header>
+        <!-- end header -->
 
-                <div class="form-row">
-                    <label for="dob">Tanggal Lahir :</label>
-                    <input type="date" id="dob" required>
-                </div>
 
-                <div class="form-row">
-                    <label>Jenis Kelamin :</label>
-                    <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="Laki - Laki" checked>
-                    <label for="male">Laki-Laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan">
-                    <label for="female">Perempuan</label>
+        <main>
+            <!-- slider -->
+            <section id="slider">
+                <h2 id="welcome-text">Hi Nama, Welcome To website</h2>
+                <p>Ini adalah website latihan</p>
+                <!-- slider content here -->
+            </section>
+            <!-- end slider -->
+        
+            <!-- HQ Info -->
+            <section id="HQ">
+                <!-- HQ content here -->
+                <h2>Headquarter</h2>
+                <div id="HQinfo">
+                    <div id="HQline">
+                        <img src="./img/RevoU.png" alt="" id="HQjakarta">
+                        <p id="HQinfo-jakarta">Jakarta</p>
+                    </div>
+                    <div id="HQline">
+                        <img src="./img/RevoU.png" alt="" id="HQbandung">
+                        <p id="HQinfo-bandung">Bandung</p>
+                    </div>
+                    <div id="HQline">
+                        <img src="./img/RevoU.png" alt="" id="HQsurabaya">
+                        <p id="HQinfo-surabaya">Surabaya</p>
                     </div>
                 </div>
-
-                <div class="form-row">
-                    <label for="message-text">Pesan :</label>
-                    <textarea id="message-text" placeholder="Pesan" required></textarea>
+            </section>
+            <!-- end HQ Info -->
+        
+            <!-- message form -->
+            <section id="message-section">
+                <h2>Message Us</h2>
+                <div class="container">
+                    <!-- Form -->
+                    <form id="message-form">
+                        <div class="form-row">
+                            <label for="name">Nama :</label>
+                            <input type="text" id="name" placeholder="Nama" required>
+                        </div>
+        
+                        <div class="form-row">
+                            <label for="dob">Tanggal Lahir :</label>
+                            <input type="date" id="dob" required>
+                        </div>
+        
+                        <div class="form-row">
+                            <label>Jenis Kelamin :</label>
+                            <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="Laki - Laki" checked>
+                            <label for="male">Laki-Laki</label>
+                            <input type="radio" id="female" name="gender" value="Perempuan">
+                            <label for="female">Perempuan</label>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <label for="message-text">Pesan :</label>
+                            <textarea id="message-text" placeholder="Pesan" required></textarea>
+                        </div>
+        
+                        <button type="submit">Submit</button>
+                    </form>
+        
+                    <!-- Output box -->
+                    <div id="output">
+                        <!-- ini pesan live -->
+                    </div>
                 </div>
+            </section>
+            <!-- end message form -->
+        </main>
 
-                <button type="submit">Submit</button>
-            </form>
-
-            <!-- Output box -->
-            <div id="output">
-                <!-- ini pesan live -->
-            </div>
-        </div>
-    </section>
-    <!-- end message form -->
-
-    <!-- footer -->
-    <footer>
-        <!-- footer content here -->
-        <p>Copyright &copy; 2023</p>
-    </footer>
-    <!-- end footer -->
-
+        <!-- footer -->
+        <footer>
+            <!-- footer content here -->
+            <p>Copyright &copy; 2023</p>
+        </footer>
+        <!-- end footer -->
+    </div>
     <!-- Popup Form -->
     <div id="popup" class="popup">
         <div class="popup-content">
